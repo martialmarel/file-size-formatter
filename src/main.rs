@@ -1,3 +1,10 @@
+use file_size_formatter::process;
+
 fn main() {
-    println!("Hello, world!");
+    match process() {
+        Ok(_) => {}
+        Err(e) => {
+            eprintln!("Error: {}", e);
+        }
+    }
 }
